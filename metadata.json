@@ -1,0 +1,6 @@
+{
+  "name": "سامانه املاک لوکس آرتام",
+  "description": "سامانه جامع خرید، فروش، رهن و اجاره املاک لوکس و مدرن مسکونی و تجاری",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
