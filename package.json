@@ -6,9 +6,9 @@
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
-    "build:gh": "BASE_PATH=/Artam/ vite build",
+    "build:gh": "BASE_PATH=/Artam-Amlak/ vite build",
     "preview": "vite preview",
-    "preview:gh": "BASE_PATH=/Artam/ vite preview",
+    "preview:gh": "BASE_PATH=/Artam-Amlak/ vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
   },

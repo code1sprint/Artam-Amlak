@@ -97,10 +97,14 @@ public/brand/                     # لوگو و دارایی‌های برند
 
 ### یک‌بار در گیتهاب
 
-1. ریپو را بسازید و کد را پوش کنید (نام ریپو مثلاً `Artam`).
-2. در **Settings → Pages → Build and deployment** منبع را روی **GitHub Actions** بگذارید.
-3. ورک‌فلو [`.github/workflows/deploy-gh-pages.yml`](.github/workflows/deploy-gh-pages.yml) با هر push به `main`/`master` بیلد می‌گیرد و دیپلوی می‌کند.
-4. `BASE_PATH` از نام ریپو ست می‌شود (`/<repo>/`)؛ اگر نام ریپو غیر از `Artam` است، اسکریپت‌های محلی `build:gh` / `preview:gh` را مطابق همان نام عوض کنید.
+1. ریپو را بسازید و کد را پوش کنید (این ریپو: `Artam-Amlak`).
+2. ورک‌فلو [`.github/workflows/deploy-gh-pages.yml`](.github/workflows/deploy-gh-pages.yml) با هر push به `main` خروجی `dist/` را روی شاخهٔ **`gh-pages`** منتشر می‌کند.
+3. در **Settings → Pages → Build and deployment**:
+   - Source: **Deploy from a branch**
+   - Branch: **`gh-pages`** / folder: **`/` (root)**
+4. چند دقیقه صبر کنید تا سایت روی `https://<user>.github.io/Artam-Amlak/` بالا بیاید.
+
+**علت صفحه سفید:** اگر Branch روی `main` باشد، فایل خام توسعه (`/src/main.tsx`) سرو می‌شود و مرورگر اپ را اجرا نمی‌کند. حتماً Branch را روی `gh-pages` بگذارید.
 
 ### تست محلی قبل از پوش
 
