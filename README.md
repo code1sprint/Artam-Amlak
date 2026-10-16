@@ -95,16 +95,18 @@ public/brand/                     # لوگو و دارایی‌های برند
 
 پروژه با Vite + React Router برای **project site** آماده است (`https://<user>.github.io/<repo>/`).
 
-### یک‌بار در گیتهاب
+### یک‌بار در گیتهاب (الزامی)
 
-1. ریپو را بسازید و کد را پوش کنید (این ریپو: `Artam-Amlak`).
-2. ورک‌فلو [`.github/workflows/deploy-gh-pages.yml`](.github/workflows/deploy-gh-pages.yml) با هر push به `main` خروجی `dist/` را روی شاخهٔ **`gh-pages`** منتشر می‌کند.
-3. در **Settings → Pages → Build and deployment**:
-   - Source: **Deploy from a branch**
-   - Branch: **`gh-pages`** / folder: **`/` (root)**
-4. چند دقیقه صبر کنید تا سایت روی `https://<user>.github.io/Artam-Amlak/` بالا بیاید.
+سایت فقط وقتی درست لود می‌شود که Pages از **خروجی بیلد** روی شاخهٔ `gh-pages` بخواند، نه از سورس `main`.
 
-**علت صفحه سفید:** اگر Branch روی `main` باشد، فایل خام توسعه (`/src/main.tsx`) سرو می‌شود و مرورگر اپ را اجرا نمی‌کند. حتماً Branch را روی `gh-pages` بگذارید.
+1. باز کنید: [Settings → Pages](https://github.com/code1sprint/Artam-Amlak/settings/pages)
+2. Source: **Deploy from a branch**
+3. Branch: **`gh-pages`** — Folder: **`/` (root)**
+4. Save
+
+ورک‌فلو با هر push به `main` بیلد را روی `gh-pages` منتشر می‌کند.
+
+**علت صفحه سفید:** اگر Branch روی `main` باشد، فایل خام (`/src/main.tsx`) سرو می‌شود و صفحه خالی می‌ماند.
 
 ### تست محلی قبل از پوش
 
