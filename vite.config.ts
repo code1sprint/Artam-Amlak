@@ -15,7 +15,7 @@ function spaFallback404(): Plugin {
   return {
     name: 'spa-fallback-404',
     closeBundle() {
-      const dist = path.resolve(__dirname, 'dist');
+      const dist = path.resolve(import.meta.dirname, 'dist');
       const indexHtml = path.join(dist, 'index.html');
       const notFoundHtml = path.join(dist, '404.html');
       if (fs.existsSync(indexHtml)) {
@@ -32,7 +32,7 @@ export default defineConfig(() => {
     plugins: [react(), tailwindcss(), spaFallback404()],
     resolve: {
       alias: {
-        '@': path.resolve(__dirname, './src'),
+        '@': path.resolve(import.meta.dirname, './src'),
       },
     },
     server: {

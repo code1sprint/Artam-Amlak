@@ -1,6 +1,7 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { withBase } from '@/lib/base';
 
 interface Props {
   children: ReactNode;
@@ -74,7 +75,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 asChild
                 className="w-full sm:w-auto"
               >
-                <a href="/">
+                <a href={withBase('/')}>
                   <Home className="w-4 h-4 ms-2" />
                   بازگشت به خانه
                 </a>

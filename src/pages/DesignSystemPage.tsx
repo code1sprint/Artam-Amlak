@@ -75,6 +75,7 @@ import {
 import { DESIGN_TOKENS } from '@/constants/tokens';
 import { APP_CONFIG } from '@/constants/app';
 import { UI_STRINGS } from '@/constants/translations';
+import { withBase } from '@/lib/base';
 import { toPersianDigits } from '@/lib/formatters';
 
 export default function DesignSystemPage() {
@@ -94,7 +95,7 @@ export default function DesignSystemPage() {
           <Breadcrumb className="mb-8">
             <BreadcrumbList>
               <BreadcrumbItem>
-                <BreadcrumbLink href="/">{UI_STRINGS.navigation.home}</BreadcrumbLink>
+                <BreadcrumbLink href={withBase('/')}>{UI_STRINGS.navigation.home}</BreadcrumbLink>
               </BreadcrumbItem>
               <BreadcrumbSeparator />
               <BreadcrumbItem>

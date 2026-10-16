@@ -29,6 +29,7 @@ import { AgentCard } from '@/features/agents/components/AgentCard';
 import { useAgents } from '@/features/agents/hooks';
 import { ROUTES } from '@/constants/routes';
 import { SITE_CONFIG } from '@/constants/site';
+import { withBase } from '@/lib/base';
 import { toPersianDigits } from '@/lib/formatters';
 
 export default function AboutPage() {
@@ -176,7 +177,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative rounded-3xl overflow-hidden shadow-elevated border-4 border-white aspect-[4/3] bg-muted">
                 <img
-                  src="/images/about/hq-office.jpg"
+                  src={withBase('/images/about/hq-office.jpg')}
                   alt="دفتر مرکزی کارگزاری آرتام در زعفرانیه"
                   className="w-full h-full object-cover"
                 />

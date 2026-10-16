@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import L from 'leaflet';
 import { Property } from '@/types/schema';
+import { withBase } from '@/lib/base';
 import { formatPrice, toPersianDigits } from '@/lib/formatters';
 
 export interface PropertyMapViewProps {
@@ -80,7 +81,7 @@ export function PropertyMapView({ properties, className = '' }: PropertyMapViewP
           </div>
           <div style="display: flex; align-items: center; justify-content: space-between; border-top: 1px solid #E8E6E1; padding-top: 6px;">
             <div style="font-weight: 800; font-size: 12px; color: #0F2A47;">${priceLabel}</div>
-            <a href="/properties/${property.slug}" style="font-size: 11px; font-weight: 700; color: #C9A24B; text-decoration: none;">جزئیات &larr;</a>
+            <a href="${withBase(`/properties/${property.slug}`)}" style="font-size: 11px; font-weight: 700; color: #C9A24B; text-decoration: none;">جزئیات &larr;</a>
           </div>
         </div>
       `;

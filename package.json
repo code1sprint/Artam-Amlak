@@ -1,12 +1,14 @@
 {
-  "name": "react-example",
+  "name": "artam",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite --port=3000 --host=0.0.0.0",
     "build": "vite build",
+    "build:gh": "BASE_PATH=/Artam/ vite build",
     "preview": "vite preview",
+    "preview:gh": "BASE_PATH=/Artam/ vite preview",
     "clean": "rm -rf dist server.js",
     "lint": "tsc --noEmit"
   },
